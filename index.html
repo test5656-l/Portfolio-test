@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="theme-color" content="#4e54c8">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<title>Portofolio Sederhana</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<canvas id="bg-canvas"></canvas>
+	<header>
+		<div class="container">
+			<h1>ROBY DARWIS</h1>
+			<p>Web Test | Debian/linux Test</p>
+		</div>
+	</header>
+	<nav class="navbar">
+		<div class="container">
+			<a href="#about" class="nav-link">Tentang</a>
+			<a href="#hobbies" class="nav-link">Hobi & Minat</a>
+			<a href="#contact" class="nav-link">Contact</a>
+		</div>
+	</nav>
+	<section class="about" id="about">
+		<div class="container">
+			<h2>Tentang Saya</h2>
+			<p>Saya adalah seorang siswa yang malas dan bodoh. Saya memiliki minat di bidang psikologi dan menulis.</p>
+		</div>
+	</section>
+	<section class="hobbies" id="hobbies">
+		<div class="container">
+			<h2>Hobi & Minat</h2>
+			<ul class="hobi-list">
+				<li class="hobi-item">Membaca buku psikologi dan pengembangan diri</li>
+				<li class="hobi-item">Tidak tahu</li>
+				<li class="hobi-item">Tidak tahu</li>
+				<li class="hobi-item">Tidak tahu</li>
+			</ul>
+		</div>
+	</section>
+	<section class="contact" id="contact">
+		<div class="container">
+			<h2>Contact</h2>
+			<div style="display: flex; align-items: center; gap: 18px; margin-bottom: 10px;">
+				<a href="mailto:go3952694@gmail.com" class="contact-link" title="Email">
+					<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Gmail" style="width:32px;height:32px;vertical-align:middle;background:#fff;border-radius:8px;padding:3px;box-shadow:0 1px 4px #0001;" />
+				</a>
+				<a href="https://instagram.com/sonip.on" target="_blank" rel="noopener" class="contact-link" title="Instagram">
+					<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width:32px;height:32px;vertical-align:middle;background:#fff;border-radius:8px;padding:3px;box-shadow:0 1px 4px #0001;" />
+				</a>
+			</div>
+			<button class="btn-contact" onclick="window.open('https://wa.me/62089512882802','_blank')">Kirim Pesan</button>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<p>&copy; 2025 Pemula. All rights reserved.</p>
+		</div>
+	</footer>
+		<script>
+			document.body.classList.add('dark');
+		</script>
+		<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+/* Navbar */
+.navbar {
+	width: 100%;
+	background: #23243a;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+}
+.navbar .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+	padding: 10px 0;
+}
+.nav-link {
+	color: #8f94fb;
+	text-decoration: none;
+	font-size: 1.08rem;
+	font-weight: 500;
+	padding: 6px 16px;
+	border-radius: 8px;
+	transition: background 0.2s, color 0.2s;
+}
+.nav-link:hover, .nav-link:focus {
+	background: #4e54c8;
+	color: #fff;
+}
+body {
+	padding-top: 54px;
+}
+/* Efek interaktif dan background pada setiap kalimat hobi */
+.hobi-list {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.hobi-item {
+	background: linear-gradient(90deg, #e0e7ff 60%, #f4f4f4 100%);
+	color: #23243a;
+	border-radius: 18px;
+	padding: 14px 22px;
+	font-size: 1.08rem;
+	box-shadow: 0 2px 8px rgba(78,84,200,0.07);
+	transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+.hobi-item:hover, .hobi-item:focus {
+	background: linear-gradient(90deg, #8f94fb 60%, #4e54c8 100%);
+	color: #fff;
+	transform: scale(1.04) translateX(6px);
+	box-shadow: 0 6px 18px rgba(78,84,200,0.18);
+}
+.dark .hobi-item {
+	background: linear-gradient(90deg, #23243a 60%, #43445a 100%);
+	color: #f4f4f4;
+}
+.dark .hobi-item:hover, .dark .hobi-item:focus {
+	background: linear-gradient(90deg, #4e54c8 60%, #8f94fb 100%);
+	color: #fff;
+}
+/* Canvas background */
+#bg-canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 0;
+	pointer-events: none;
+	background: transparent;
+}
+body > *:not(#bg-canvas) {
+	position: relative;
+	z-index: 1;
+}
+body.dark {
+	background: #181a20;
+	color: #f4f4f4;
+}
+body.dark header {
+	background: linear-gradient(90deg, #23243a, #43445a);
+	color: #fff;
+}
+body.dark section {
+	background: #23243a;
+	color: #f4f4f4;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+body.dark .project-item {
+	background: #23243a;
+	color: #f4f4f4;
+	box-shadow: 0 1px 8px rgba(0,0,0,0.18);
+}
+body.dark h2 {
+	color: #8f94fb;
+}
+body.dark footer {
+	background: #23243a;
+	color: #fff;
+}
+body.dark .btn-contact {
+	background: linear-gradient(90deg, #23243a, #43445a);
+	color: #fff;
+}
+body.dark .btn-contact:hover {
+	background: linear-gradient(90deg, #43445a, #23243a);
+}
+
+.btn-darkmode {
+	background: #fff;
+	color: #4e54c8;
+	border: none;
+	border-radius: 20px;
+	padding: 8px 18px;
+	font-size: 1rem;
+	cursor: pointer;
+	margin-top: 18px;
+	margin-left: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+	transition: background 0.3s, color 0.3s;
+}
+.btn-darkmode:hover {
+	background: #4e54c8;
+	color: #fff;
+}
+/* Animasi fade-in untuk section */
+section {
+	opacity: 0;
+	transform: translateY(40px);
+	transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+section.active {
+	opacity: 1;
+	transform: none;
+}
+
+/* Efek hover pada project-item */
+.project-item {
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-item:hover {
+	transform: translateY(-8px) scale(1.03);
+	box-shadow: 0 6px 18px rgba(78,84,200,0.13);
+}
+
+/* Tombol kontak */
+.btn-contact {
+	background: linear-gradient(90deg, #4e54c8, #8f94fb);
+	color: #fff;
+	border: none;
+	padding: 12px 28px;
+	border-radius: 24px;
+	font-size: 1rem;
+	cursor: pointer;
+	margin-top: 12px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+	transition: background 0.3s, transform 0.2s;
+}
+.btn-contact:hover {
+	background: linear-gradient(90deg, #8f94fb, #4e54c8);
+	transform: scale(1.06);
+}
+body {
+	font-family: 'Segoe UI', Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: #f4f4f4;
+	color: #222;
+}
+
+header {
+	background: linear-gradient(90deg, #4e54c8, #8f94fb);
+	color: #fff;
+	padding: 40px 0 20px 0;
+	text-align: center;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.container {
+	width: 90%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+h1 {
+	margin: 0 0 10px 0;
+	font-size: 2.5rem;
+	letter-spacing: 2px;
+}
+
+section {
+	margin: 40px 0;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	padding: 32px 0;
+}
+
+h2 {
+	color: #4e54c8;
+	margin-bottom: 18px;
+	font-size: 1.5rem;
+}
+
+.project-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+}
+
+.project-item {
+	background: #f7f8fa;
+	border-radius: 8px;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+	padding: 20px;
+	flex: 1 1 220px;
+	min-width: 200px;
+}
+
+.contact p {
+	margin: 6px 0;
+}
+
+footer {
+	background: #4e54c8;
+	color: #fff;
+	text-align: center;
+	padding: 18px 0;
+	border-radius: 0 0 10px 10px;
+	margin-top: 40px;
+	font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+	html, body {
+		font-size: 15px;
+		-webkit-tap-highlight-color: transparent;
+	}
+	.container {
+		width: 98%;
+		padding: 0 4px;
+	}
+	.project-list {
+		flex-direction: column;
+		gap: 12px;
+	}
+	section {
+		padding: 18px 0;
+	}
+	header {
+		padding: 28px 0 12px 0;
+	}
+	h1 {
+		font-size: 1.5rem;
+	}
+	h2 {
+		font-size: 1.1rem;
+	}
+	.btn-contact, .btn-darkmode {
+		font-size: 0.95rem;
+		padding: 10px 18px;
+	}
+	.project-item {
+		padding: 12px;
+		min-width: 0;
+	}
+	#bg-canvas {
+		width: 100vw !important;
+		height: 100vh !important;
+	}
+}
